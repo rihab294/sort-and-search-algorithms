@@ -1,0 +1,20 @@
+ALGORITHM InsertionSort
+VAR
+    i,j,current: INTEGER;
+    arr: ARRAY_OF INTEGER[100];
+BEGIN
+    READ(i)
+    READ(j)
+    READ(current)
+    READ(arr)
+
+    FOR i FROM 1 TO arr.length STEP 1 DO
+    current:= arr[i];
+
+    j:= i-1
+    WHILE ((j>=0) AND (arr[j]>current)) DO
+        arr[j+1]:= arr[j]
+        j:=j-1
+    END_WHILE
+    arr[j+1]:= current
+END
